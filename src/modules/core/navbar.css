@@ -4,14 +4,13 @@ nav{
 	padding: 10px 0;
 }
 .navContainer{
-	border-bottom: 1.5px solid black;
-	background-color: white;
 	padding: 5px 0px;
 	display: inline-flex;
 	min-width: 90%;
 	align-items: center;
 	justify-content: space-evenly;
 }
+
 .logo img{
 	max-height: 80px;
 }
@@ -26,6 +25,9 @@ nav{
 
 @media (max-width: 950px) {
 	.mobileNav{
+		display: block;
+	}
+	.navTitle{
 		display: block;
 	}
 	.desktopNav{

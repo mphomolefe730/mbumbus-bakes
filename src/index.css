@@ -8,10 +8,16 @@ body{
 	margin: 0;
 	font-family: 'Roboto', 'system-ui';
 	text-transform: uppercase;
+	color: white;
+	background-color: black;
+}
+
+img{
+	border-radius: 1rem;
 }
 
 a{
-	color: black;
+	color: white;
 	padding: 10px 0;
 	text-decoration: none;
 }

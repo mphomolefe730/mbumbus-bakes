@@ -23,7 +23,10 @@ function HomePage(){
                 </div>
                 <Link to="/buckets">Shop bucket orders</Link>
             </div>
-			<p>Home Page Works!</p>
+            <div className='heroSection2'>
+                <p>MBUMBUS BAKES?</p>
+                <h1>A bold quest to shatter cookie conventions, perfect the craft, and create the world's most incredible cookies. This is the flavor of uncompromising excellence.</h1>
+            </div>
 		</div>
 	)
 };
