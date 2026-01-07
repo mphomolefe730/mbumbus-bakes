@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './homepage.css';
 import images from '../../assets/jsons/images.json';
+import businessInfo from '../../assets/jsons/business-information.json';
 import { useEffect } from 'react';
 
 function HomePage(){
@@ -24,8 +25,25 @@ function HomePage(){
                 <Link to="/buckets">Shop bucket orders</Link>
             </div>
             <div className='heroSection2'>
-                <p>MBUMBUS BAKES?</p>
-                <h1>A bold quest to shatter cookie conventions, perfect the craft, and create the world's most incredible cookies. This is the flavor of uncompromising excellence.</h1>
+                <p  className='gold-text'>MBUMBUS BAKES?</p>
+                <h1>{businessInfo.whoarewe}</h1>
+            </div>
+            <div className='heroSection3'>
+                <div>
+                    <img src={images.heroImage} alt="hero section" />
+                    <h1 className='gold-text'>Packaging</h1>
+                    <p>{businessInfo.packaging}</p>
+                </div>
+                <div>
+                    <img src={images.heroImage} alt="hero section" />
+                    <h1 className='gold-text'>taste</h1>
+                    <p>{businessInfo.taste}</p>
+                </div>
+                <div>
+                    <img src={images.heroImage} alt="hero section" />
+                    <h1  className='gold-text'>convenience</h1>
+                    <p>{businessInfo.convenience}</p>
+                </div>
             </div>
 		</div>
 	)

@@ -1,6 +1,10 @@
+.homeContainer{
+	max-width: 80%;
+	margin: auto;
+}
+
 .heroSection{ 
 	height: 75svh;
-	max-width: 80%;
 	margin: auto;
 	border-radius: 1rem;
 	background-size: 'cover';
@@ -30,17 +34,29 @@
 .heroSection > * {
     position: relative;
     z-index: 2;
-	font-weight: 300;
 }
 
-.heroSection2{
+.heroSection2, .heroSection3{
 	margin-top: 1rem;
 }
 
-.heroSection2 > *{
-	max-width: 80%;
-	font-weight: 300;
-	margin: auto;
+.heroSection3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); 
+    gap: 1.5rem; 
+    justify-content: center;
+}
+
+.heroSection3 > div{
+	text-align: center;
+}
+
+.heroSection3 > div > img {
+    width: 100%;   
+    height: auto;     
+    max-height: 100%; 
+    display: block; 
+    object-fit: contain; 
 }
 
 .heroSection a{
@@ -48,4 +64,11 @@
 	color: black;
 	padding: 1rem 2rem;
 	border-radius: 0.5rem;
+}
+
+@media (max-width: 950px) {
+    .heroSection3 {
+        grid-template-columns: repeat(auto-fit, minmax(3rem, 25rem));
+        gap: 1rem;
+    }
 }
