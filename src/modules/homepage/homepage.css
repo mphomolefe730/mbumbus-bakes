@@ -3,7 +3,8 @@
 	margin: auto;
 }
 
-.heroSection{ 
+.heroSection,
+.heroSection4{ 
 	height: 75svh;
 	margin: auto;
 	border-radius: 1rem;
@@ -16,31 +17,7 @@
 	position: relative;
 }
 
-.heroSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-}
-
-.heroSection4{ 
-    width: 100%;
-    height: 25svh;
-	margin: auto;
-	border-radius: 1rem;
-	background-size: 'cover';
-	background-position: 'center';
-    background-repeat: 'no-repeat';
-	align-items: center;
-	flex-direction: column;
-	display: flex;
-	position: relative;
-}
-
+.heroSection::before, 
 .heroSection4::before {
     content: '';
     position: absolute;
@@ -52,11 +29,13 @@
     z-index: 1;
 }
 
-.heroSection > div{
+.heroSection > div
+.heroSection4 > div{
 	margin-top: 4rem;
 }
 
-.heroSection > * {
+.heroSection > *, 
+.heroSection4 > * {
     position: relative;
     z-index: 2;
 }

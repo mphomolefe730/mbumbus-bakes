@@ -16,7 +16,7 @@ function NavBar(){
                     <a className='navTitle' href='/shop'>shop</a>
                     <a className='navTitle' href='/box-set'>box set</a>
                     <a className='navTitle' href='/buckets'>buckets</a>
-                    <a className='navTitle logo' href='/'><img src="/src/assets/logos/mbumbus_bakes_logo.jpeg"/></a>
+                    <a className='navTitle logo' href='/'><img src="/src/assets/logos/mbumbus_bakes_logo.jpeg"/><small style={{display: "block"}}>mbumbus bakes</small></a>
                     <a className='' href='/packets'>packets</a>
                     <a className='' href='/custome-order'>custom order</a>
                     <a className='' href='/account'><FontAwesomeIcon icon={faUser}/></a>
