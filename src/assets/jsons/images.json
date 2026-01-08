@@ -1,7 +1,8 @@
 {
+    "cakeVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/cake-video.mp4",
+    "cookieVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/cookie-video.mp4",
+    "deliveryVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/delivery-video.mp4",
     "heroImage": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/heros-section-image.jpg",
     "logo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/logos/mbumbus_bakes_logo.jpeg",
-    "cakeVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/cake-video.mp4",
-    "cookieVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/cookie-video.mp4"
-    "deliveryVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/delivery-video.mp4"
+    "packetImageUrl": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/3-packet-dark-background.jpeg"
 }

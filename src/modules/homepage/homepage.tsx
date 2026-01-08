@@ -6,10 +6,14 @@ import { useEffect } from 'react';
 
 function HomePage(){
     let heroImageUrl = images.heroImage;
+    let packetImageUrl = images.packetImageUrl;
 
     useEffect(() => {
         const heroSection = document.getElementsByClassName('heroSection')[0] as HTMLElement;
         heroSection.style.backgroundImage = `url(${heroImageUrl})`;
+
+        const heroSection2 = document.getElementsByClassName('heroSection4')[0] as HTMLElement;
+        heroSection2.style.backgroundImage = `url(${packetImageUrl})`;
         
     }, []);
     
@@ -20,7 +24,7 @@ function HomePage(){
                     <h1>INSANELY </h1>
                     <h1>TASTY & </h1>
                     <h1>GORGEOUS </h1>
-                    <h1>COOKIES </h1>
+                    <h1>bakes </h1>
                 </div>
                 <Link to="/buckets">Shop bucket orders</Link>
             </div>
@@ -28,7 +32,20 @@ function HomePage(){
                 <p  className='gold-text'>MBUMBUS BAKES?</p>
                 <h1>{businessInfo.whoarewe}</h1>
             </div>
-            <div className='heroSection3'>
+            <div className='heroSection3'>                
+                <div>
+                    <div className='videoContainer'>
+                        <video 
+                            src={images.deliveryVideo}
+                            autoPlay 
+                            muted 
+                            loop 
+                            playsInline
+                        />
+                    </div>
+                    <h1  className='gold-text'>convenience</h1>
+                    <p>{businessInfo.convenience}</p>
+                </div>
                 <div>
                     <div className='videoContainer'>
                         <video 
@@ -55,19 +72,10 @@ function HomePage(){
                     <h1 className='gold-text'>taste</h1>
                     <p>{businessInfo.taste}</p>
                 </div>
-                <div>
-                    <div className='videoContainer'>
-                        <video 
-                            src={images.deliveryVideo}
-                            autoPlay 
-                            muted 
-                            loop 
-                            playsInline
-                        />
-                    </div>
-                    <h1  className='gold-text'>convenience</h1>
-                    <p>{businessInfo.convenience}</p>
-                </div>
+            </div>
+            <div className='heroSection4'>
+                <h1>on the go?</h1>
+                <Link to="/packets">shop packets</Link>
             </div>
 		</div>
 	)
