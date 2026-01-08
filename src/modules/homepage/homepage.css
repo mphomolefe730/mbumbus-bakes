@@ -47,16 +47,22 @@
     justify-content: center;
 }
 
-.heroSection3 > div{
-	text-align: center;
+.videoContainer{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    max-height: 300px;
 }
 
-.heroSection3 > div > img {
-    width: 100%;   
-    height: auto;     
-    max-height: 100%; 
+.heroSection3 > div > div > video {
+    max-width: 100%;  
+    transform: scale(2);
+    overflow: hidden;
     display: block; 
-    object-fit: contain; 
+    object-fit: contain;
 }
 
 .heroSection a{

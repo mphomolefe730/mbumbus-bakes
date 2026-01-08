@@ -30,17 +30,41 @@ function HomePage(){
             </div>
             <div className='heroSection3'>
                 <div>
-                    <img src={images.heroImage} alt="hero section" />
+                    <div className='videoContainer'>
+                        <video 
+                            src={images.cakeVideo}
+                            autoPlay 
+                            muted 
+                            loop 
+                            playsInline
+                        />
+                    </div>
                     <h1 className='gold-text'>Packaging</h1>
                     <p>{businessInfo.packaging}</p>
                 </div>
                 <div>
-                    <img src={images.heroImage} alt="hero section" />
+                    <div className='videoContainer'>
+                        <video 
+                            src={images.cookieVideo}
+                            autoPlay 
+                            muted 
+                            loop 
+                            playsInline
+                        />
+                    </div>
                     <h1 className='gold-text'>taste</h1>
                     <p>{businessInfo.taste}</p>
                 </div>
                 <div>
-                    <img src={images.heroImage} alt="hero section" />
+                    <div className='videoContainer'>
+                        <video 
+                            src={images.deliveryVideo}
+                            autoPlay 
+                            muted 
+                            loop 
+                            playsInline
+                        />
+                    </div>
                     <h1  className='gold-text'>convenience</h1>
                     <p>{businessInfo.convenience}</p>
                 </div>
