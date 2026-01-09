@@ -2,7 +2,7 @@ import "./buckets.css";
 import buckets from '../../assets/jsons/bucket-prices.json';
 import { useState, useEffect } from "react";
 import images from '../../assets/jsons/images.json';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Buckets() {    
     let heroImageUrl = images.bucketsHero;
@@ -12,11 +12,13 @@ function Buckets() {
     >([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [twoMixture, setTwoMixture] = useState('');
+    const [cartFilled, setCartFilled] = useState(false);
 
     const SendRequest = (event: React.FormEvent) => {
         event.preventDefault();
         localStorage.setItem("selectedItemsBuckets", JSON.stringify(selectedItems));
         localStorage.setItem("twoMixture", JSON.stringify(twoMixture));
+        setCartFilled(true);
     };
 
     const handlePriceChange = (
@@ -43,6 +45,11 @@ function Buckets() {
         const heroSection = document.getElementsByClassName('heroSectionBuckets')[0] as HTMLElement;
         heroSection.style.backgroundImage = `url(${heroImageUrl})`;
     }, [selectedItems]);
+
+    useEffect(() => {        
+        if (localStorage.getItem("selectedItemsBuckets") != null) setCartFilled(true);
+        if (localStorage.getItem("twoMixture") != null) setCartFilled(true);
+    }, []);
 
 
     return (
@@ -93,7 +100,8 @@ function Buckets() {
             </table>
             <div className="totalSection">
                 <p>Total Price: R{totalPrice}</p>
-                <button type="submit">ADD TO CART</button>
+                <button type="submit" style={{display: cartFilled ? 'none' : 'block'}}>ADD TO CART</button>
+                <Link className="signature" to="/checkout" style={{display: cartFilled ? 'block' : 'none'}}>EDIT CART</Link>
             </div>
         </form>
         </div>

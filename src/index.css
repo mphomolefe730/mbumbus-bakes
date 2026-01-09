@@ -31,8 +31,8 @@ a{
 	background: linear-gradient(to right, #cfc09f 27%, #ffecb3 40%, #3a2c0f 88%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	/* text-shadow: 1px 1px 2px rgba(0,0,0,0.3); */
 }
+
 .signature{
 	color: red;
 	margin: 0.5rem;

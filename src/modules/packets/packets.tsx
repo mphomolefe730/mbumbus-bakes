@@ -1,6 +1,7 @@
 import buckets from '../../assets/jsons/packet-prices.json';
 import { useState, useEffect } from "react";
 import images from '../../assets/jsons/images.json';
+import { Link } from 'react-router-dom';
 
 function Packets(){
     let heroImageUrl = images.packetImageUrl;
@@ -9,10 +10,12 @@ function Packets(){
         { bucketName: string; quantity:number; price: number }[]
     >([]);
     const [maxReached, setMaxReached] = useState(false);
+    const [cartFilled, setCartFilled] = useState(false);
 
     const SendRequest = (event: React.FormEvent) => {
         event.preventDefault();
         localStorage.setItem("selectedItemsPackets", JSON.stringify(selectedItems));
+        setCartFilled(true);
     };
 
     const handlePriceChange = (
@@ -41,6 +44,10 @@ function Packets(){
         const heroSection = document.getElementsByClassName('heroSectionBuckets')[0] as HTMLElement;
         heroSection.style.backgroundImage = `url(${heroImageUrl})`;
     }, [selectedItems]);
+
+    useEffect(() => {        
+        if (localStorage.getItem("selectedItemsPackets") != null) setCartFilled(true);
+    }, []);
 
     return(
         <div className="bucketContainer">
@@ -91,7 +98,8 @@ function Packets(){
                 <div className="totalSection">
                     <p>{`${selectedItems.reduce((sum, item) => sum + item.quantity, 0)} packet(s)`}</p>
                     <p>Total Price: R{totalPrice}</p>
-                    <button style={{display: (maxReached) ? 'none' : 'block' }} type="submit">ADD TO CART</button>
+                    <button style={{display: (maxReached || cartFilled) ? 'none' : 'block' }} type="submit">ADD TO CART</button>
+                     <Link className="signature" to="/checkout" style={{display: cartFilled ? 'block' : 'none'}}>EDIT CART</Link>
                 </div>
             </form>
         </div>

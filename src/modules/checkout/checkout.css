@@ -6,3 +6,15 @@
     border-radius: 1rem;
     width: 100%;
 }
+.removeButton{
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    color: black;
+}
+
+.removeButton a{
+    color: black;
+}
