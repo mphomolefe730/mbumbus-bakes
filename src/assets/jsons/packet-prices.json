@@ -1,0 +1,14 @@
+[
+    {
+        "bucketName": "Breakfast Special (Plain scone, Jam Tart, Banana bread)",
+        "prices": [1,2,3,4,5]
+    },
+    {
+        "bucketName": "Kalahari Dessert (Two Plains Scones & Jam Tart)",
+        "prices": [1,2,3,4,5]
+    },
+    {
+        "bucketName": "Tea Time (Two Plain Scones & Vanilla Muffin)",
+        "prices": [1,2,3,4,5]
+    }
+]

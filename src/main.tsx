@@ -7,6 +7,8 @@ import NavBar from './modules/core/navbar.tsx';
 import Footer from './modules/core/footer.tsx';
 import HomePage from './modules/homepage/homepage.tsx';
 import Buckets from './modules/buckets/buckets.tsx';
+import Packets from './modules/packets/packets.tsx';
+import Checkout from './modules/checkout/checkout.tsx';
 
 
 const router = createBrowserRouter([
@@ -17,6 +19,12 @@ const router = createBrowserRouter([
   },{
     path: '/buckets',
     element: <Buckets/>
+  },{
+    path: '/packets',
+    element: <Packets/>
+  },{
+    path: '/checkout',
+    element: <Checkout/>
   }
 ])
 

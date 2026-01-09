@@ -5,5 +5,8 @@
     "heroImage": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/heros-section-image.jpg",
     "logo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/logos/mbumbus_bakes_logo.jpeg",
     "packetImageUrl": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/3-packet-bl.jpeg",
-    "packetImageDarkBackgroundUrl": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/3-packet-dark-background.jpeg"
+    "packetImageDarkBackgroundUrl": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/3-packet-dark-background.jpeg",
+    "bucketsHero": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/buckets.jpeg",
+    "blueberrySconeMug": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/blueberry-scone-mug.jpeg",
+    "plainSconeMug": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/plain-scone-mug.jpeg"
 }

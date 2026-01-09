@@ -5,29 +5,29 @@ import images from '../../assets/jsons/images.json';
 import { useNavigate } from 'react-router-dom';
 
 function Buckets() {    
-    let heroImageUrl = images.heroImage;
-    const navigate = useNavigate();
-    
+    let heroImageUrl = images.bucketsHero;
+
     const [selectedItems, setSelectedItems] = useState<
-        { bucketName: string; price: number }[]
+        { bucketName: string; quantity:number; price: number }[]
     >([]);
     const [totalPrice, setTotalPrice] = useState(0);
     const [twoMixture, setTwoMixture] = useState('');
 
     const SendRequest = (event: React.FormEvent) => {
         event.preventDefault();
-        localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+        localStorage.setItem("selectedItemsBuckets", JSON.stringify(selectedItems));
         localStorage.setItem("twoMixture", JSON.stringify(twoMixture));
     };
 
     const handlePriceChange = (
         e: React.ChangeEvent<HTMLInputElement>,
         bucket: any,
+        quantity: number,
         price: number
         ) => {
         setSelectedItems(prev => {
             if (e.target.checked) {
-            return [...prev, { bucketName: bucket.bucketName, price }];
+            return [...prev, { bucketName: bucket.bucketName, quantity, price }];
             } else {
             return prev.filter(
                 item =>
@@ -47,7 +47,7 @@ function Buckets() {
 
     return (
         <div className="bucketContainer">
-            <div className="heroSectionBuckets">
+            <div className="heroSectionBuckets move">
                 <h1 style={{display: 'flex', margin: "auto"}}>buckets</h1> 
             </div>
         <form onSubmit={SendRequest}>
@@ -77,7 +77,7 @@ function Buckets() {
                                 item.bucketName === bucket.bucketName &&
                                 item.price === price
                             )}
-                            onChange={(e) => handlePriceChange(e, bucket, price)}
+                            onChange={(e) => handlePriceChange(e, bucket, pIndex, price)}
                             />
 
                             <span className="price-card">
@@ -93,7 +93,7 @@ function Buckets() {
             </table>
             <div className="totalSection">
                 <p>Total Price: R{totalPrice}</p>
-                <button type="submit">checkout</button>
+                <button type="submit">ADD TO CART</button>
             </div>
         </form>
         </div>
