@@ -42,3 +42,16 @@ a{
 	margin: 0.5rem;
 	font-weight: 500;
 }
+
+.checkoutButton{
+	background-color: black;
+	color: white;
+	border-radius: 1rem;
+	border: none;
+	padding: 1rem 2rem;
+}
+
+.InactiveButton{
+	text-decoration: line-through;
+	color: gray;
+}

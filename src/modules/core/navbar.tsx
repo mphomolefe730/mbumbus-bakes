@@ -13,12 +13,12 @@ function NavBar(){
         <nav>
             <div className="desktopNav">
                 <div className='navContainer'>
-                    <a className='navTitle' href='/shop'>shop</a>
-                    <a className='navTitle' href='/box-set'>box set</a>
+                    <a className='navTitle InactiveButton' href='/shop'>shop</a>
+                    <a className='navTitle InactiveButton' href='/box-set'>box set</a>
                     <a className='navTitle' href='/buckets'>buckets</a>
                     <a className='navTitle logo' href='/'><img src="/src/assets/logos/mbumbus_bakes_logo.jpeg"/><small style={{display: "block"}}>mbumbus bakes</small></a>
                     <a className='' href='/packets'>packets</a>
-                    <a className='' href='/custome-order'>custom order</a>
+                    <a className='InactiveButton' href='/custome-order'>custom order</a>
                     <a className='' href='/account'><FontAwesomeIcon icon={faUser}/></a>
                     <a className='' href='/checkout'><FontAwesomeIcon icon={faCartShopping}/></a>
                 </div>
@@ -30,11 +30,11 @@ function NavBar(){
                 </div>
                 <div style={{ display: (open) ? "grid": "none", backgroundColor: "black", padding: "10px", height: "100%", width: "70%", zIndex: 99, position: "absolute", gridTemplateColumns: "2fr 4fr"}}>
                         <a className='navTitle' href='/'>home</a>
-                        <a className='navTitle' href='/shop'>shop</a>
-                        <a className='navTitle' href='/box-set'>box set</a>
+                        <a className='navTitle InactiveButton' href='/shop'>shop</a>
+                        <a className='navTitle InactiveButton' href='/box-set'>box set</a>
                         <a className='navTitle' href='/buckets'>buckets</a>
                         <a className='navTitle' href='/packets'>packets</a>
-                        <a className='navTitle' href='/custome-order'>custom order</a>
+                        <a className='navTitle InactiveButton' href='/custome-order'>custom order</a>
                         
                 </div>
             </div>

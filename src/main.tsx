@@ -5,6 +5,7 @@ import './index.css';
 
 import NavBar from './modules/core/navbar.tsx';
 import Footer from './modules/core/footer.tsx';
+import Error from './modules/core/error.tsx';
 import HomePage from './modules/homepage/homepage.tsx';
 import Buckets from './modules/buckets/buckets.tsx';
 import Packets from './modules/packets/packets.tsx';
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
   { 
     path: '/', 
     element: <HomePage/>,
-    errorElement: <div><p>404 NOT FOUND</p></div>
+    errorElement: <Error/>
   },{
     path: '/buckets',
     element: <Buckets/>
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
     path: '/checkout',
     element: <Checkout/>
   }
-])
+]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

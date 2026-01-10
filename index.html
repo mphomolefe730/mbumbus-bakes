@@ -10,4 +10,24 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+  <script>
+    //responsible for creating a new session each 10 minutes
+    const SESSION_KEY = 'sessionStartTime';
+    const TEN_MINS_MS = 10 * 60 * 1000;
+    const ITEMS_TO_CLEAR = ['selectedItemsPackets', 'selectedIItemsBuckets', 'twoMixture'];
+
+    const savedTime = localStorage.getItem(SESSION_KEY);
+    const now = Date.now();
+
+    if (!savedTime || (now - parseInt(savedTime)) >= TEN_MINS_MS) {
+      ITEMS_TO_CLEAR.forEach(key => localStorage.removeItem(key));
+      localStorage.setItem(SESSION_KEY, now.toString());
+      console.log('Cleared expired session items');
+      localStorage.removeItem("selectedItemsPackets");
+      localStorage.removeItem("selectedItemsBuckets");
+      localStorage.removeItem("twoMixture");
+    } else {
+      console.log('Session still active');
+    }  
+  </script>
 </html>

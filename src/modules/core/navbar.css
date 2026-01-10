@@ -33,4 +33,7 @@ nav{
 	.desktopNav{
 		display: none;
 	}
+	.totalSection{
+		flex-direction: column;
+	}
 }

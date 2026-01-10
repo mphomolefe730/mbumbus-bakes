@@ -2,6 +2,7 @@ import buckets from '../../assets/jsons/packet-prices.json';
 import { useState, useEffect } from "react";
 import images from '../../assets/jsons/images.json';
 import { Link } from 'react-router-dom';
+import './packets.css';
 
 function Packets(){
     let heroImageUrl = images.packetImageUrl;
@@ -99,7 +100,7 @@ function Packets(){
                     <p>{`${selectedItems.reduce((sum, item) => sum + item.quantity, 0)} packet(s)`}</p>
                     <p>Total Price: R{totalPrice}</p>
                     <button style={{display: (maxReached || cartFilled) ? 'none' : 'block' }} type="submit">ADD TO CART</button>
-                     <Link className="signature" to="/checkout" style={{display: cartFilled ? 'block' : 'none'}}>EDIT CART</Link>
+                        <Link className="signature" to="/checkout" style={{display: cartFilled ? 'block' : 'none'}}>EDIT CART</Link>
                 </div>
             </form>
         </div>

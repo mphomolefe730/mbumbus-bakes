@@ -5,19 +5,20 @@ import images from '../../assets/jsons/images.json';
 function Checkout(){
     const [bucketItems, setBucketItems] = useState<any[]>([]);
     const [packetItems, setPacketItems] = useState<any[]>([]);
-    const [selectedItems, setSelectedItems] = useState<string>("");
+    const [selectedItems, setSelectedItems] = useState<string>("Cash");
     const [cartFilled, setCartFilled] = useState(false);
+    const phoneNumber = '27696065820';
     let heroImageUrl = images.blueberrySconeMug;
 
     const paymentObject = [
         {
-            paymentMethod: "cash",
+            paymentMethod: "Cash",
             info: ""
         },{
-            paymentMethod: "eft",
+            paymentMethod: "EFT",
             info: ""
         },{
-            paymentMethod: "speedpoint",
+            paymentMethod: "Speedpoint",
             info: ""
         }
     ]
@@ -29,10 +30,43 @@ function Checkout(){
         if (newQuantity == 3) return 20;
     }
 
-    const handlePaymentType = (event: React.FormEvent) => {
+    const handlePaymentType = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const form = event.target as HTMLFormElement;
-    }
+        const formData = new FormData(event.currentTarget);
+        const whatsappNumber = (formData.get("whatsappNumber") as string)?.trim();
+        const deliveryLocation = (formData.get("deliveryLocation") as string)?.trim();
+
+        let pItem = "";
+        let bItem = "";
+        
+        packetItems.forEach((item) => {
+            pItem += `${item.bucketName} [${item.quantity} packets] - R${item.price}, `;
+        });
+        bucketItems.forEach((item) => {
+            bItem += `${item.bucketName} [${handleLiterChange(item.quantity)}L] - R${item.price}, `;
+        });
+
+        pItem = pItem.replace(/, $/, "");
+        bItem = bItem.replace(/, $/, "");
+
+        const message = `🛒 *NEW ORDER*
+💰 *Payment:* ${selectedItems}
+📱 *WhatsApp:* ${whatsappNumber}
+📍 *Delivery:* ${deliveryLocation}
+💼 *Total:* R${totalPrice}
+
+📦 *PACKETS:*
+${pItem || "None"}
+
+🪣 *BUCKETS:*
+${bItem || "None"}`;
+
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+        console.log("WhatsApp URL:", whatsappUrl);
+        window.open(whatsappUrl, '_blank');
+    };
 
     const handleRemovingOfItem = (orderType:string) =>{
         if (orderType === 'bucket') {
@@ -118,6 +152,7 @@ function Checkout(){
                                                 <input 
                                                     type="checkbox" 
                                                     key={index} 
+                                                    name={item.paymentMethod}
                                                     value={item.paymentMethod} 
                                                     checked={selectedItems === item.paymentMethod}
                                                     onChange={() => selectedItems == item.paymentMethod ? setSelectedItems("") : setSelectedItems(item.paymentMethod)}
@@ -134,14 +169,20 @@ function Checkout(){
                             </tbody>
                         </table>
                         <p>
-                            <label>phone number: </label>
-                            <input type="text" name="phoneNumber" required />
+                            <label>WhatsApp number: </label>
+                            <input type="text" name="whatsappNumber" required />
                         </p>
                         <p>
-                            <label>address: </label>
-                            <input type="text" name="address" required />
+                            <label>Delivery location: </label>
+                            <select name="deliveryLocation">
+                                <option value="Pretoria Central">Pretoria Central</option>
+                                <option value="Pretoria West">Pretoria West</option>
+                                <option value="Pretoria North">Pretoria North</option>
+                                <option value="Pretoria East">Pretoria East</option>
+                                <option value="other">Other</option>
+                            </select>
                         </p>
-                        <button type="submit">Confirm Order</button>
+                        <button className="checkoutButton" type="submit">Confirm Order</button>
                     </form>
                 </div>
             </div>
