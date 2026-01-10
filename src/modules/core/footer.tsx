@@ -4,6 +4,7 @@ function Footer(){
     const phoneNumber = businessInfo.phoneNumber; 
     const message = `Hello! 👋
 I’m contacting you from your website filling a new ticket.
+
 *Service/Topic:* 
 [type your service/topic here]
 
@@ -24,7 +25,7 @@ Thank you, I look forward to your response.`;
     return(
         <div className='heroSection footer'>
             <a href={whatsappUrl} target="_blank">Contract us</a>
-            <p>or email <a style={{backgroundColor: 'black', color: 'white', padding: 0}} href="mailto:mbumbusbakes@gmail.com">mbumbusbakes@gmail.com</a></p>
+            <p>or email <a style={{backgroundColor: 'none', color: 'white', padding: 0}} href="mailto:mbumbusbakes@gmail.com">mbumbusbakes@gmail.com</a></p>
             <p>© 2026 Mbumbus Bakes. All rights reserved.</p>
         </div>
     )

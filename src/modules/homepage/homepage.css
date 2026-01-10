@@ -49,6 +49,7 @@
     grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); 
     gap: 1.5rem; 
     justify-content: center;
+    height: fit-content;
     margin-bottom: 2rem;
 }
 
