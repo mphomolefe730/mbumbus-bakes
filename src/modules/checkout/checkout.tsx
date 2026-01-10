@@ -11,7 +11,7 @@ function Checkout(){
     const phoneNumber = businessInfo.phoneNumber;
     let heroImageUrl = images.blueberrySconeMug;
 
-    const paymentObject = [
+    const [paymentObject, setPaymentObject] = useState([
         {
             paymentMethod: "Cash",
             info: ""
@@ -22,7 +22,7 @@ function Checkout(){
             paymentMethod: "Speedpoint",
             info: ""
         }
-    ]
+    ]);
 
     const handleLiterChange = (newQuantity: number) => {
         if (newQuantity == 0) return 2.5;
@@ -87,6 +87,10 @@ ${bItem || "None"}`;
         
         if (bucketItems) {
             setBucketItems(bucketItems);
+            setPaymentObject([{
+                paymentMethod: "EFT",
+                info: ""
+            }])
             setCartFilled(true);
         }
         if (packetItems) {

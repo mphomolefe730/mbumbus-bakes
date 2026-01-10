@@ -1,19 +1,19 @@
 [
     {
         "bucketName": "Plain scones",
-        "prices": [150, 280, 500, 750]
+        "prices": [150, 320, 500, 750]
     },{
         "bucketName": "Custard scones",
-        "prices": [180, 300, 600, 800]
+        "prices": [180, 350, 600, 800]
     },{
         "bucketName": "Lemon scones",
-        "prices": [180, 300, 600, 800]
+        "prices": [180, 380, 600, 800]
     },{
         "bucketName": "Lemon & Blueberry scones",
-        "prices": [220, 400, 700, 850]
+        "prices": [220, 400, 650, 850]
     },{
         "bucketName": "any two mixture",
-        "prices": [250, 450, 750, 850]
+        "prices": [250, 450, 750, 900]
     },{
         "bucketName": "Vanilla muffins",
         "prices": [140, 280, 500, 750]
@@ -22,9 +22,9 @@
         "prices": [220, 400, 650, 850]
     },{
         "bucketName": "jam tarts",
-        "prices": [200, 360, 650, 800]
+        "prices": [200, 350, 650, 850]
     },{
         "bucketName": "biscuits (melting moments)",
-        "prices": [250, 350, 750, 850]
+        "prices": [250, 400, 700, 900]
     }
 ]

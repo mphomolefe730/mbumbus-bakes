@@ -55,7 +55,7 @@ function HomePage(){
                     <h1 className='gold-text'>Packaging</h1>
                     <p>{businessInfo.packaging}</p>
                 </div>
-                <div>
+                <div className="lastEmement">
                     <div className='videoContainer'>
                         <video 
                             src={images.cookieVideo}
