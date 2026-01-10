@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import './checkout.css';
 import images from '../../assets/jsons/images.json';
+import businessInfo from '../../assets/jsons/business-information.json'
 
 function Checkout(){
     const [bucketItems, setBucketItems] = useState<any[]>([]);
     const [packetItems, setPacketItems] = useState<any[]>([]);
     const [selectedItems, setSelectedItems] = useState<string>("Cash");
     const [cartFilled, setCartFilled] = useState(false);
-    const phoneNumber = '27696065820';
+    const phoneNumber = businessInfo.phoneNumber;
     let heroImageUrl = images.blueberrySconeMug;
 
     const paymentObject = [
