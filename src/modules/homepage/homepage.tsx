@@ -74,12 +74,12 @@ function HomePage(){
                 </div>
             </div>
             
-            <div className='heroSection' style={{height: '40svh'}}>
+            <div className='heroSection lastElement' style={{height: '40svh', marginBottom: '2rem'}}>
                 <div>
                     <h1>{businessInfo.onTheGoCaption}</h1>
                 </div>
                 <p>{businessInfo.onTheGoInfo}</p>
-                <Link to="/offerings">Browse</Link>
+                <Link to="/faq">Health Guide</Link>
             </div>
 		</div>
 	)

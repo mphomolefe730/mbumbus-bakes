@@ -1,11 +1,12 @@
 {
     "bucketVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/bucket.mp4",
     "cakeVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/cake-video.mp4",
+    "cookieVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/cookie-video.mp4",
     "eventVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/event.mp4",
     "event2Video": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/event2.mp4",
     "jamTartVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/jam-tart-out-of-oven.mp4",
     "jamTartBeforeVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/jam-tart-before-oven.mp4",
-    "ovenOpenVidoe": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/open-oven.mp4",
+    "ovenOpenVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/open-oven.mp4",
     "deliveryVideo": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/videos/delivery-video.mp4",
     "heroImage": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/heros-section-image.jpg",
     "insideBag": "https://raw.githubusercontent.com/mphomolefe730/mbumbus-bakes/refs/heads/main/src/assets/images/inside-bag.jpeg",

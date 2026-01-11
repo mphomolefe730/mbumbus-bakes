@@ -14,7 +14,7 @@ function NavBar(){
             <div className="desktopNav">
                 <div className='navContainer'>
                     <a className='navTitle InactiveButton' href='/shop'>shop</a>
-                    <a className='navTitle' href='/offerings'>offerings</a>
+                    <a className='navTitle' href='/faq'>FAQ</a>
                     <a className='navTitle' href='/buckets'>buckets</a>
                     <a className='navTitle logo' href='/'><img src="/src/assets/logos/mbumbus_bakes_logo.jpeg"/><small style={{display: "block"}}>mbumbus bakes</small></a>
                     <a className='' href='/packets'>packets</a>

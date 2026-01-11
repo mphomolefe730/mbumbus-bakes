@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './packets.css';
 
 function Packets(){
-    let heroImageUrl = images.packetImageUrl;
+    let heroImageUrl = images.insideBag;
     const [totalPrice, setTotalPrice] = useState(0);    
     const [selectedItems, setSelectedItems] = useState<
         { bucketName: string; quantity:number; price: number }[]

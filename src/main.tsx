@@ -10,7 +10,7 @@ import HomePage from './modules/homepage/homepage.tsx';
 import Buckets from './modules/buckets/buckets.tsx';
 import Packets from './modules/packets/packets.tsx';
 import Checkout from './modules/checkout/checkout.tsx';
-
+import FAQ from './modules/faq/faq.tsx';
 
 const router = createBrowserRouter([
   { 
@@ -26,6 +26,9 @@ const router = createBrowserRouter([
   },{
     path: '/checkout',
     element: <Checkout/>
+  },{
+    path: '/faq',
+    element: <FAQ/>
   }
 ]);
 
