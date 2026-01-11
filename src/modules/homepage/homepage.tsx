@@ -6,10 +6,14 @@ import { useEffect } from 'react';
 
 function HomePage(){
     let heroImageUrl = images.heroImage;
+    let heroImageUrl2 = images.jamHero;
 
     useEffect(() => {
         const heroSection = document.getElementsByClassName('heroSection')[0] as HTMLElement;
         heroSection.style.backgroundImage = `url(${heroImageUrl})`;
+
+        const heroSection2 = document.getElementsByClassName('heroSection')[1] as HTMLElement;
+        heroSection2.style.backgroundImage = `url(${heroImageUrl2})`;
         
     }, []);
     
@@ -22,7 +26,7 @@ function HomePage(){
                     <h1>GORGEOUS </h1>
                     <h1>bakes </h1>
                 </div>
-                <Link to="/buckets">Shop bucket orders</Link>
+                <Link to="/buckets">Shop buckets</Link>
             </div>
             <div className='heroSection2'>
                 <p  className='gold-text'>MBUMBUS BAKES?</p>
@@ -70,11 +74,12 @@ function HomePage(){
                 </div>
             </div>
             
-            <div className='heroSection' style={{ height: "25svh"}}>
+            <div className='heroSection' style={{height: '40svh'}}>
                 <div>
-                    <h1>{businessInfo.onTheGo}</h1>
+                    <h1>{businessInfo.onTheGoCaption}</h1>
                 </div>
-                <Link to="/packets">shop packets</Link>
+                <p>{businessInfo.onTheGoInfo}</p>
+                <Link to="/offerings">Browse</Link>
             </div>
 		</div>
 	)
