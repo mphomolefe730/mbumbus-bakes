@@ -19,9 +19,6 @@ Thank you, I look forward to your response.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
-    console.log("WhatsApp URL:", whatsappUrl);
-    window.open(whatsappUrl, '_blank');
-
     return(
         <div className='heroSection footer'>
             <a href={whatsappUrl} target="_blank">Contract us</a>

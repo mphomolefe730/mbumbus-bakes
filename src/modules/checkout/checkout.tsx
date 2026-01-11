@@ -6,7 +6,7 @@ import businessInfo from '../../assets/jsons/business-information.json'
 function Checkout(){
     const [bucketItems, setBucketItems] = useState<any[]>([]);
     const [packetItems, setPacketItems] = useState<any[]>([]);
-    const [selectedItems, setSelectedItems] = useState<string>("Cash");
+    const [selectedItems, setSelectedItems] = useState<string>("EFT");
     const [cartFilled, setCartFilled] = useState(false);
     const phoneNumber = businessInfo.phoneNumber;
     let heroImageUrl = images.blueberrySconeMug;
@@ -138,7 +138,7 @@ ${bItem || "None"}`;
                     <h1>Total: R{totalPrice}</h1>
                 </div>
                 <div className='bankContainer'
-                    style= {{ display: (selectedItems === 'eft' || bucketItems.length > 0 ) ? 'block' : 'none' }}>
+                    style= {{ display: (selectedItems === 'EFT' || bucketItems.length > 0 ) ? 'block' : 'none' }}>
                     <p>Payment will serve as confirmation to start your order. Please await for order confirmation via WhatsApp before paying. Banking details:</p>
                     <p>Account Holder: Mbumbus Bakes (pty) ltd</p>
                     <p>Account Number: 63170524532</p>
@@ -181,9 +181,9 @@ ${bItem || "None"}`;
                             <label>Delivery location: </label>
                             <select name="deliveryLocation">
                                 <option value="Pretoria Central">Pretoria Central</option>
-                                <option value="Pretoria West">Pretoria West</option>
+                                <option style={{display: (bucketItems.length > 0)? 'block' : 'none'}} value="Pretoria West">Pretoria West</option>
                                 <option value="Pretoria North">Pretoria North</option>
-                                <option value="Pretoria East">Pretoria East</option>
+                                <option style={{display: (bucketItems.length > 0)? 'block' : 'none'}} value="Pretoria East">Pretoria East</option>
                                 <option value="other">Other</option>
                             </select>
                         </p>
